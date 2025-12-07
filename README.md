@@ -6,7 +6,7 @@ O esperado de um projeto incial:
 - [x] Fazer o auto do tema (detecta preferência do sistema)
 - [x] Multi línguas ([vue-i18n](https://vue-i18n.intlify.dev/))
 - [x] Colocar mais palavras na tradução (i18n.json)
-- [ ] Colocar os ícones do bootstrap5
+- [x] Colocar os ícones do bootstrap5
 - [ ] Pensar no site com a pasta layouts?!?
 - [ ] Busca interna ??? [algolia](https://www.algolia.com/developers) [typesense](https://typesense.org/)
 - [ ] Blog / Notícias ???
