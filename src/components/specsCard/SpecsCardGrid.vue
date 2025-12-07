@@ -27,7 +27,7 @@ const props = withDefaults(
     
 })
 
-const specs = ref<Record<string, unknown>[]>([])
+const specs = ref<Record<string, unknown>[]>([]) 
 
 onMounted(async () => {
     const response = await fetch(props.apiURL)

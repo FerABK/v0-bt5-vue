@@ -4,8 +4,10 @@ import App from "@/App.vue";
 import { router } from "@/router";
 import "bootstrap/scss/bootstrap.scss";
 import translateFile from "@/i18n.json";
-import ChatBot from '@/components/ChatBot.vue'
-
+import ChatBot from '@/components/ChatBot.vue';
+import "bootstrap/scss/bootstrap.scss";
+import "bootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Definir as traduções para o idioma
 const messages = translateFile;

@@ -28,7 +28,8 @@
         <!-- Redes sociais -->
         <div class="col-md-3 mb-4">
           <h5 class="fw-bold">Social</h5>
-          <div class="d-flex flex-wrap gap-2 social-icons-container">
+
+          <div class="d-flex flex-wrap gap-3 social-icons-container">
             <a
               v-for="item in socialMedia"
               :key="item.url"
@@ -37,11 +38,9 @@
               :aria-label="item.alt"
               target="_blank"
               rel="noopener"
-              class="d-inline-block"
+              class="d-inline-flex align-items-center"
             >
-              <svg class="bi social-icon" fill="currentColor">
-                <use :xlink:href="getIconPath(item.name)" />
-              </svg>
+              <i :class="`${item.icon} social-icon`"></i>
             </a>
           </div>
         </div>
@@ -58,22 +57,29 @@
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
-const socialMedia = [
-  { name: "facebook", alt: t("footer.socialMedia.facebook"), url: "https://www.facebook.com/UTFPR.TD/" },
-  { name: "instagram", alt: t("footer.socialMedia.instagram"), url: "https://www.instagram.com/utfprtd/" },
-  { name: "linkedin", alt: t("footer.socialMedia.linkedin"), url: "https://www.linkedin.com/school/utfpr-oficial" },
-  { name: "tiktok", alt: t("footer.socialMedia.tiktok"), url: "https://tiktok.com/@utfpr.toledo" },
-  { name: "twitter-x", alt: t("footer.socialMedia.twitter"), url: "https://x.com/utfpr_td" },
-  { name: "whatsapp", alt: t("footer.socialMedia.whatsapp"), url: "https://whatsapp.com/channel/0029Vb3tWIO3wtb3Jvag6Z0H" },
-  { name: "youtube", alt: t("footer.socialMedia.youtube"), url: "https://www.youtube.com/@UTFPRToledoOficial" },
-];
 
-const getIconPath = (name: string) => {
-  return `node_modules/bootstrap-icons/bootstrap-icons.svg#${name}`;
-};
+const socialMedia = [
+  { icon: "bi-facebook", alt: t("footer.socialMedia.facebook"), url: "https://www.facebook.com/UTFPR.TD/" },
+  { icon: "bi-instagram", alt: t("footer.socialMedia.instagram"), url: "https://www.instagram.com/utfprtd/" },
+  { icon: "bi-linkedin", alt: t("footer.socialMedia.linkedin"), url: "https://www.linkedin.com/school/utfpr-oficial" },
+  { icon: "bi-tiktok", alt: t("footer.socialMedia.tiktok"), url: "https://tiktok.com/@utfpr.toledo" },
+  { icon: "bi-twitter-x", alt: t("footer.socialMedia.twitter"), url: "https://x.com/utfpr_td" },
+  { icon: "bi-whatsapp", alt: t("footer.socialMedia.whatsapp"), url: "https://whatsapp.com/channel/0029Vb3tWIO3wtb3Jvag6Z0H" },
+  { icon: "bi-youtube", alt: t("footer.socialMedia.youtube"), url: "https://www.youtube.com/@UTFPRToledoOficial" },
+];
 </script>
 
 <style scoped>
-@import "@/styles/FooterBar.css"
+  .social-icon {
+    font-size: 1.5rem;
+    transition: transform 0.2s;
+  }
 
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+
+  .social-icons-container {
+    font-size: 1rem;
+  }
 </style>

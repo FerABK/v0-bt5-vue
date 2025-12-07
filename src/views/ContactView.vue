@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
-import * as bootstrap from "bootstrap";
+import { Toast } from "bootstrap";
 interface FormData {
   nome: string;
   email: string;
@@ -28,12 +28,12 @@ const submissionError = ref("");
 
 
 const toastEl = ref<HTMLElement | null>(null);
-let toastInstance: bootstrap.Toast | null = null;
+let toastInstance: Toast | null = null;
 
 onMounted(() => {
  
   if (toastEl.value) {
-    toastInstance = new bootstrap.Toast(toastEl.value);
+    toastInstance = new Toast(toastEl.value);
   }
 });
 
@@ -201,7 +201,7 @@ const resetForm = () => {
             width="100%"
             height="400"
             style="border: 0"
-            allowfullscreen=""
+            allowfullscreen
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
@@ -238,5 +238,28 @@ const resetForm = () => {
 </template>
 
 <style scoped>
-@import "@/styles/Contact.css";
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+  .contact-form {
+    max-width: 30em;
+    font-size: 1rem;
+  }
+  .form-label {
+    font-size: 1rem;
+  }
+  input.form-control {
+    font-size: 1rem;
+    padding: 0.5em;
+  }
+  button.btn {
+    font-size: 1rem;
+    padding: 0.75em 0;
+  }
+  .mapa-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: start;
+  }
 </style>

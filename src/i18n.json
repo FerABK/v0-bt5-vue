@@ -178,13 +178,13 @@
       "email": "contato@utfpr.edu.br",
       "copyright": "© 2025 Federal University of Technology - Paraná. All rights reserved.",
       "socialMedia": {
-        "whatsapp": "Link to WhatsApp",
-        "twitter": "Link to Twitter",
-        "youtube": "Link to YouTube",
-        "instagram": "Link to Instagram",
-        "facebook": "Link to Facebook",
-        "linkedin": "Link to LinkedIn",
-        "tiktok": "Link to TikTok"
+        "whatsapp": "WhatsApp link",
+        "twitter": "Twitter Link",
+        "youtube": "YouTube Link",
+        "instagram": "Instagram Link",
+        "facebook": "Facebook Link",
+        "linkedin": "LinkedIn Link",
+        "tiktok": "TikTok Link"
       }
     },
     "languageNames": {
@@ -236,7 +236,7 @@
     },
     "homePage": {
       "title": "Home Page",
-      "welcomeMessage": "Welcome to the main page of our website."
+      "welcomeMessage": "Welcome to our website's main page."
     },
     "newsPage": {
       "firstNews": {
